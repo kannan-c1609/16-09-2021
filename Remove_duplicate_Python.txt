@@ -1,0 +1,12 @@
+n=int(input())
+arr = list(map(int, input().split()))
+
+for i in range(0, n):
+    flag = 0
+    j = i
+    while(j >= 0):
+        if(arr[i] == arr[j]):
+            flag = flag + 1
+        j = j - 1
+    if(flag == 1):
+        print(arr[i], end = ' ')

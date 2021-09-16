@@ -1,0 +1,17 @@
+import sys
+
+row_size=int(input())
+col_size=int(input())
+
+matrix=[]
+
+for i in range(row_size):
+    matrix.append([int(j) for j in input().split()])
+
+min=sys.maxsize
+for i in range(len(matrix)):
+    for j in range(len(matrix[0])):
+        if matrix[i][j]<=min:
+            min=matrix[i][j]
+
+print(min)
